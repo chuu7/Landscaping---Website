@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #1f7a1f;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('../images/hero.jpg') center/cover no-repeat;
+  background-color: #0f2e0f;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  margin-left: 5%;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #1f7a1f;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+.services {
+  background: #f4f4f4;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+footer {
+  background: #069206;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+#contact {
+  background: #406b40;
+}
+
+#contact h2 {
+  margin-bottom: 0.5rem;
+}
+
+#contact p {
+  margin-bottom: 1.5rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact textarea {
+  min-height: 120px;
+}
+/* -------- Mobile + Tablet Optimization -------- */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    padding: 0 5%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contact form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+/* Smooth scroll when clicking Services/Contact */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better spacing + readability */
+.hero-content p {
+  margin-top: 0.75rem;
+  max-width: 42ch;
+}
+
+/* Make service cards feel modern */
+.service-card {
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Improve section titles */
+section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Make nav links look like a real menu */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Mobile polish */
+@media (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3.5rem 0;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    padding: 0 5%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .services .container,
+  #contact .container {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+}
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+#gallery {
+  background: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+/* Testimonials */
+#testimonials {
+  background: #f4f4f4;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.testimonial-card p {
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-card h4 {
+  font-size: 0.95rem;
+  color: #1f7a1f;
+  font-weight: bold;
+}
